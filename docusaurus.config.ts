@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Notibox',
-  tagline: 'Intelligent Alerts, Future Connected',
+  tagline: 'Intelligent Alerts, Interactive Display, Future Connected',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
