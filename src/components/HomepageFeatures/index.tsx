@@ -2,6 +2,9 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+import View3D from "@egjs/react-view3d";
+import "@egjs/react-view3d/css/view3d-bundle.min.css";
+
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
@@ -89,12 +92,20 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+        <div className="bg-white">
+          <View3D
+            className="bg-white sm:py-32"
+            src="https://naver.github.io/egjs-view3d/model/draco/alarm.glb"
+          />
         </div>
-      </div>
+          <div className="row">
+
+
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
+        </div>
     </section>
-  );
+);
 }
